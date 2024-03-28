@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post" action="{% url 'calculate' %}">
+    {% csrf_token %}
+    <span>{{result}}</span>
+    <input type="number" min="0" name="bir">
+    <br>
+    <input type="number" min="0" name="ikki">
+    <button type="submit">Hisoblash</button>
+</form>  
+{% endblock content %} 
