@@ -24,6 +24,13 @@ V =[
 [math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	12	,0	,133,],
 [math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	133	,0],
 ]
+additional_stations = [
+    "Qo'l", "Orzu", "Chodak", "Kon", "Temiryo'obod", "Qo'shminor", "Pop", "Chust", 
+    "To'raqo'rg'on", "Raustan", "Namangan", "Chortoq", "Uychi", "Uchqo'rg'on", "Haqqulabod",
+    "Paytug`", "Qordaryo", "Andijon-2", "Yangi Andijon", "Jalaquduq", "Savay", "Karsu-Uzbek",
+    "Xonobod", "Andijon-1", "Axtachi", "Asaka", "Quvasoy", "Oxunboboyev", "Marg`ilon", "Oltariq",
+    "Furqat", "Kakir", "Qo'qon NP", "Qo'qon MP", "Yaypan", "Rapkan", "Arikbashi", "Suvanobod", "Buvayda"
+]
 
 
 # V = [[0, 2, math.inf, 3, 1, math.inf, math.inf, 10],

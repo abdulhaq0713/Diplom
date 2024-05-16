@@ -1,12 +1,376 @@
+<!-- country_selection.html -->
+
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="post" action="{% url 'calculate' %}">
-    {% csrf_token %}
-    <span>{{result}}</span>
-    <input type="number" min="0" name="bir">
-    <br>
-    <input type="number" min="0" name="ikki">
-    <button type="submit">Hisoblash</button>
-</form>  
-{% endblock content %} 
+<div class="container">
+    <div class="content-wrapper">
+        <h2>Select a Starting Station</h2>
+
+        <form method="post" action="{% url 'calculate' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="station">Choose a station:</label>
+                <select id="station" name="station" class="form-control">
+                    <option value="0">Chodak</option>
+                        <option value="0">Qo'l</option>
+                        <option value="1">Orzu</option>
+                        <option value="2">Chodak</option>
+                        <option value="3">Kon</option>
+                        <option value="4">Temir yo`l obod</option>
+                        <option value="5">Qo`shminor</option>
+                        <option value="6">Pop</option>
+                        <option value="7">Chust</option>
+                        <option value="8">To`raqo`rg`on</option>
+                        <option value="9">Raustan</option>
+                        <option value="10">Namangan</option>
+                        <option value="11">Chortoq</option>
+                        <option value="12">Uychi</option>
+                        <option value="13">Uchqo`rg`on</option>
+                        <option value="14">Haqqulabod</option>
+                        <option value="15">Paytug`</option>
+                        <option value="16">Qordaryo</option>
+                        <option value="17">Andijon-2</option>
+                        <option value="18">Yangi Andijon</option>
+                        <option value="19">Jalaquduq</option>
+                        <option value="20">Savay</option>
+                        <option value="21">Karsu-Uzbek</option>
+                        <option value="22">Xonobod</option>
+                        <option value="23">Andijon-1</option>
+                        <option value="24">Axtachi</option>
+                        <option value="25">Asaka</option>
+                        <option value="26">Quvasoy</option>
+                        <option value="27">Oxunboboyev</option>
+                        <option value="28">Marg`ilon</option>
+                        <option value="29">Oltariq</option>
+                        <option value="30">Furqat</option>
+                        <option value="31">Kakir</option>
+                        <option value="32">Qo'qon NP</option>
+                        <option value="33">Qo'qon MP</option>
+                        <option value="34">Yaypan</option>
+                        <option value="35">Rapkan</option>
+                        <option value="36">Arikbashi</option>
+                        <option value="37">Suvanobod</option>
+                        <option value="38">Buvayda</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Choose additional stations:</label>
+                <div class="checkbox-group">
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="0">
+                        <span class="checkmark"></span>
+                        Qo'l
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="1">
+                        <span class="checkmark"></span>
+                        Orzu
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="2">
+                        <span class="checkmark"></span>
+                        Chodak
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="3">
+                        <span class="checkmark"></span>
+                        Kon
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="4">
+                        <span class="checkmark"></span>
+                        Temir yo`l obod
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="5">
+                        <span class="checkmark"></span>
+                        Qo`shminor
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="6">
+                        <span class="checkmark"></span>
+                        Pop
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="7">
+                        <span class="checkmark"></span>
+                        Chust
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="8">
+                        <span class="checkmark"></span>
+                        To'raqo'rg'on
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="9">
+                        <span class="checkmark"></span>
+                        Raustan
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="10">
+                        <span class="checkmark"></span>
+                        Namangan
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="11">
+                        <span class="checkmark"></span>
+                        Chortoq
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="12">
+                        <span class="checkmark"></span>
+                        Uychi
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="13">
+                        <span class="checkmark"></span>
+                        Uchqo`rg`on
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="14">
+                        <span class="checkmark"></span>
+                        Haqqulabod
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="15">
+                        <span class="checkmark"></span>
+                        Paytug`
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="16">
+                        <span class="checkmark"></span>
+                        Qordaryo
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="17">
+                        <span class="checkmark"></span>
+                        Andijon-2
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="19">
+                        <span class="checkmark"></span>
+                        Yangi Andijon
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="20">
+                        <span class="checkmark"></span>
+                        Jalaquduq
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="21">
+                        <span class="checkmark"></span>
+                        Savay
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="22">
+                        <span class="checkmark"></span>
+                        Karsu-Uzbek
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="23">
+                        <span class="checkmark"></span>
+                        Xonobod
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="24">
+                        <span class="checkmark"></span>
+                        Andijon-1
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="25">
+                        <span class="checkmark"></span>
+                        Axtachi
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="26">
+                        <span class="checkmark"></span>
+                        Asaka
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="27">
+                        <span class="checkmark"></span>
+                        Quvasoy
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="28">
+                        <span class="checkmark"></span>
+                        Oxunboboyev
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="29">
+                        <span class="checkmark"></span>
+                        Marg`ilon
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="30">
+                        <span class="checkmark"></span>
+                        Oltariq
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="31">
+                        <span class="checkmark"></span>
+                        Furqat
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="32">
+                        <span class="checkmark"></span>
+                        Kakir
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="33">
+                        <span class="checkmark"></span>
+                        Qo'qon NP
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="34">
+                        <span class="checkmark"></span>
+                        Qo'qon MP
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="35">
+                        <span class="checkmark"></span>
+                        Yaypan
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="36">
+                        <span class="checkmark"></span>
+                        Rapkan
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="37">
+                        <span class="checkmark"></span>
+                        Arikbashi
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="38">
+                        <span class="checkmark"></span>
+                        Suvanobod
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="country" value="39">
+                        <span class="checkmark"></span>
+                        Buvayda
+                    </label>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* Global styles */
+    body {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    /* Form styles */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        box-sizing: border-box;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column; /* Display checkboxes in a single column */
+    }
+
+    .checkbox {
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        user-select: none;
+    }
+
+    .checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 5px;
+    }
+
+    .checkbox input:checked + .checkmark:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background-color: #007bff;
+        border-radius: 3px;
+    }
+
+    /* Button styles */
+    .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+    }
+</style>
+
+{% endblock %}
