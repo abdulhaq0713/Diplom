@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="centr">
+    <h1>{{ stansiya_1 }} ga eng yaqin stansiyalar ro'yxati</h1>
+    {% for key, value in stansiya_2.items %}
+        <h6>{{ key }}: {{ value }}</h6>
+    {% endfor %}
+</div>
+<style>
+    .centr {
+        text-align: center;
+    }
+</style>
+{% endblock %}
