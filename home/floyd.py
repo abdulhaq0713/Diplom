@@ -9,7 +9,7 @@ def get_path(P, u, v):
 
     return path
 
-V =[   
+V =[
 [0,	21.3,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	],
 [21.3,	0,	22.7,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	],
 [math.inf,	22.7,	0,	14.3,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	math.inf,	],
